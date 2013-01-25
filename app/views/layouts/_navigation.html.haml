@@ -1,5 +1,43 @@
-= link_to "Consignapp", root_path, :class => 'brand'
-%ul.nav
+-#.attached
+.row
+  %nav.top-bar
+    %ul
+      %li.name.active
+        %h1
+          %a{:href => root_path}
+            Home
+      %li.toggle-topbar
+        %a{:href => "#"}
+    %section
+      %ul.left
+        %li.divider
+        %li.top
+          %a{:href => "#"}
+            The Summit
+        %li.top
+          %a{:href => "#"}
+            YouThePower
+        %li.top
+          %a{:href => "#"}
+            Power Tools
+        %li.top
+          %a{:href => "#"}
+            Blog
+        %li.top
+          %a{:href => "#"}
+            Sponsors
+        %li.top
+          %a{:href => "#"}
+            Partners
+        %li.top
+          %a{:href => "#"}
+            Blog
+        %li.top
+          %a{:href => "#"}
+            Photos & Videos
+
+-#= link_to "Consignapp", root_path, :class => 'brand'
+-#%ul.nav
   - if user_signed_in?
     %li
       = link_to 'Logout', destroy_user_session_path, :method=>'delete'
