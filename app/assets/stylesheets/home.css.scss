@@ -1,3 +1,52 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$darkBrown : #372f2c;
+$mediumBrown : #1a1a1a;
+
+.body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, table {
+  font-family: 'Lato', sans-serif;
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+  background: $mediumBrown;
+
+  h1, h3 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+
+  .signup-form {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4),0px 0px 0px rgba(0,0,0,0);
+    padding-top: 15px;
+    background:#fff;
+    border-radius: 1px;
+    margin-top: 50px;
+
+    input {
+      font-size: 16px;
+      height: 50px;
+    }
+
+    .button {
+      background-color: $darkBrown;
+      border: 1px solid $mediumBrown;
+    }
+  }
+
+  .registered {
+     a {
+       color: #ffffff;
+       text-decoration: underline;
+     }
+  }
+}

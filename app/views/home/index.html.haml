@@ -1,4 +1,30 @@
--#%h3 Home
--#- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+- content_for(:navigation) do
+  = render "/layouts/home_navigation"
+.hero
+  .row
+    .twelve.columns.centered
+      %h1
+        Use
+        = t(:title)
+        to manage your sales.
+
+  .row.signup-form
+    %form
+      .three.columns
+        %input{:type => "text", :placeholder => "Your Store Name"}
+      .three.columns
+        %input{:type => "email", :placeholder => "Your Email Address"}
+      .three.columns
+        %input{:type => "password", :placeholder => "Password"}
+      .three.columns
+        %input.button.radius{:type => "submit" }
+  .row.registered
+    .twelve.columns.centered
+      %h3
+        Already Registered?
+        %a{:href => "login"}
+          Login in here
+
+
+
+
