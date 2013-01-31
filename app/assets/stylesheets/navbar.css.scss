@@ -27,6 +27,10 @@ $darkBrown : #372f2c;
       border-color: $darkBrown;
       border-bottom-color: #ffffff;
       border-top-color: #ffffff;
+
+      a {
+        color: $darkBrown;
+      }
     }
 
     li.active:hover {

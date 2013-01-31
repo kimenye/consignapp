@@ -4,6 +4,7 @@
 
 $darkBrown : #372f2c;
 $mediumBrown : #1a1a1a;
+$lightGray: #eeeeee;
 
 .body {
   font-family: 'Lato', sans-serif;
@@ -16,10 +17,10 @@ h1, h2, h3, h4, h5, h6, table {
 .hero {
   width: 100%;
   height: 400px;
-  background: $mediumBrown;
+  background: $lightGray;
 
   h1, h3 {
-    color: #ffffff;
+    color: $mediumBrown;
     text-align: center;
     font-weight: normal;
     margin-top: 20px;
@@ -41,11 +42,22 @@ h1, h2, h3, h4, h5, h6, table {
       background-color: $darkBrown;
       border: 1px solid $mediumBrown;
     }
+
+    #error_explanation {
+      h2 {
+        display: none;
+      }
+
+      ul {
+        margin-left: 30px;
+        color:red;
+      }
+    }
   }
 
   .registered {
      a {
-       color: #ffffff;
+       color: $mediumBrown;
        text-decoration: underline;
      }
   }
