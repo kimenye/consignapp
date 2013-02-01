@@ -9,21 +9,26 @@
         %li.toggle-topbar
           %a{:href => "#"}
       %section
+        %ul.left
+          %li
+            %a{:href => "#"}
+              = current_user.temp_company_name
         %ul.right
           %li.divider
-          %li
+          -#%li
             %a
               Features
-          %li.divider
-          %li
+          -#%li.divider
+          -#%li
             %a
               Examples
-          %li.divider
-          %li
+          -#%li.divider
+          -#%li
             %a
               Pricing
+          -#%li.divider
+          -#- if !user_signed_in?
+          %li
+            %a{:href => destroy_user_session_path}
+              Log-out
           %li.divider
-          - if !user_signed_in?
-            %li
-              %a{:href => new_user_session_path}
-                Login
