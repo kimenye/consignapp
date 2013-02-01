@@ -23,7 +23,13 @@
             %a
               Pricing
           %li.divider
-          - if !user_signed_in?
+          - if !member_signed_in?
             %li
-              %a{:href => new_user_session_path}
+              %a{:href => new_member_session_path}
                 Login
+          - else
+            %li
+              -#%a{:href => destroy_member_session_path, :method => :delete}
+                Log-out
+              = link_to "Log-out",destroy_member_session_path, :method => :delete
+            %li.divider

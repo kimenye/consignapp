@@ -12,7 +12,7 @@
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
       = devise_error_messages!
       .three.columns
-        = f.text_field :temp_company_name, :placeholder => "Your Store Name"
+        = f.text_field :temp_store_name, :placeholder => "Your Store Name"
       .three.columns
         = f.email_field :email, :placeholder => "Your Email Address"
       .three.columns
