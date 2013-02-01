@@ -1,13 +1,13 @@
 module HomeHelper
   def resource_name
-    :member
+    :user
   end
 
   def resource
-    @resource ||= Member.new
+    @resource ||= User.new
   end
 
   def devise_mapping
-    @devise_mapping ||= Devise.mappings[:member]
+    @devise_mapping ||= Devise.mappings[:user]
   end
 end

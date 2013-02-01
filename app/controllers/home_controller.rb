@@ -3,6 +3,5 @@ class HomeController < ApplicationController
   end
 
   def home
-    #binding.pry
   end
 end
