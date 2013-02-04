@@ -1,0 +1,16 @@
+- content_for(:navigation) do
+  = render "/layouts/home_navigation"
+.row
+  .six.columns
+    %h2
+      Sign in
+      %small
+        Log in to your store
+    .login
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        = f.email_field :email, :autofocus => true, :placeholder => "Your email address", :class => "seven"
+        = f.password_field :password, :placeholder => "Your Password", :class => "seven"
+        = f.submit "Sign in", :class => "button radius"
+    .links
+      = render "devise/shared/links"
+  .six.columns
