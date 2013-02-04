@@ -1,0 +1,17 @@
+-content_for(:navigation) do
+  = render "/layouts/member_navigation"
+
+-content_for (:title) do
+  = "#{t(:title)} | Setup your Company"
+
+.wizard
+  .six.columns.centered
+    %h4
+      Setup your brand new shop
+    %hr
+    = form_for(@company, :url => wizard_path, :method => :put) do |f|
+      = f.label :name
+      = f.text_field :name, :class => "four"
+      = f.label :email
+      = f.email_field :email, :class => "four"
+      = f.submit :class => "button radius", :value => "Create Shop"

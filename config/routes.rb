@@ -6,4 +6,5 @@ Consignapp::Application.routes.draw do
   end
   root :to => "home#index"
 
+  resources :setup
 end
