@@ -1,5 +1,5 @@
 - content_for(:navigation) do
-  = render "/layouts/member_navigation"
+  = render :partial => "/layouts/member_navigation", :locals => { :active => "home" }
 
 - content_for(:messages) do
   = render "/layouts/messages"

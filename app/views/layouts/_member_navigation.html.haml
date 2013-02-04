@@ -2,7 +2,7 @@
   .fixed.contain-to-grid
     %nav.top-bar
       %ul
-        %li.name.active
+        %li.name{:class => (active == "home")? "name active" : ""}
           %h1
             %a{:href => root_path}
               = t(:title)
@@ -16,9 +16,8 @@
                 = current_company.name
         %ul.right
           %li.divider
-          %li
-            %a
-              Users
+          %li{:class => (active == "users")? "name active" : ""}
+            = link_to "Users", users_path
           %li.divider
           %li
             %a
