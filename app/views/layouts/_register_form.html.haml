@@ -26,5 +26,4 @@
     .twelve.columns.centered
       %h3
         Already Registered?
-        %a{:href => "login"}
-          Login in here
+        = link_to "Login in here", new_user_session_path
