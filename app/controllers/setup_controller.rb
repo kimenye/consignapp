@@ -17,6 +17,12 @@ class SetupController < Wicked::WizardController
         @company = Account.new(params[:account])
         @company.user_id = current_user.id
         @company.save!
+
+        #Associate a user with the correct account
+        @me = User.find(current_user.id)
+        @me.account_id = @company.id
+        @me.save!
+
         skip_step
     end
     render_wizard

@@ -28,3 +28,4 @@ gem "binding_of_caller", ">= 0.6.8", :group => :development
 gem "pry", :group => :development
 gem "pry-nav", :group => :development
 gem "wicked"
+gem "sqlite3", :group => :development

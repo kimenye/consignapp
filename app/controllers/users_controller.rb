@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
-    @users = User.all
+    @users = User.where(:account_id => current_user.account_id)
   end
 
   def show
