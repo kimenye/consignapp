@@ -1,0 +1,33 @@
+- content_for(:navigation) do
+  = render :partial => "/layouts/member_navigation", :locals => { :active => "customers" }
+
+.row
+  .three.columns
+    .sidebar
+      %ul.nav-bar.vertical
+        %li
+          = link_to 'New Customer', new_customer_path
+          -#%a{:href => new_user_path } Add User
+  .nine.columns
+    .twelve.columns
+      %h4
+        Customers
+        %small
+          Manage the stores where you deliver your consignments
+      %hr
+    .twelve.columns
+      %table.responsive
+        %thead
+          %tr
+            %th Name
+            %th Email
+            %th Account
+        %tbody
+        - @customers.each do |customer|
+          %tr
+            %td= customer.name
+            %td= customer.email
+            %td= customer.account
+            %td= link_to 'Show', customer
+            %td= link_to 'Edit', edit_customer_path(customer)
+            %td= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' }
