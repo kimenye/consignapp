@@ -3,6 +3,35 @@
 
 .row
   .three.columns
+    .sidebar
+      %ul.nav-bar.vertical
+        %li
+          %a{:href => new_user_path } Add User
+    -#%ul.tabs.vertical
+      %li.active
+        %a Users
+        %ul
+          %li
+            %a
+              New
+    -#%ul.tabs.vertical.hide-on-phones
+      %li
+        %a{:href => "index.php"} Getting Started
+      %li
+        %a{:href => "compass.php"} Compass
+      %li
+        %a{:href => "rails.php"} Rails
+      %li
+        %a{:href => "sass.php"} Sass
+      %li
+        %a{:href => "quickstart.php"} CSS Quickstart
+      %li.active
+        %a{:href => "components.php"} Components
+        %ul
+          %li
+            %a{:href => "components.php"} Overview
+          %li
+            %a{:href => "grid.php"} The Grid
   .nine.columns
     .twelve.columns
       %h4
