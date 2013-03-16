@@ -7,7 +7,6 @@
       %ul.nav-bar.vertical
         %li
           = link_to 'New Customer', new_customer_path
-          -#%a{:href => new_user_path } Add User
   .nine.columns
     .twelve.columns
       %h4
@@ -21,13 +20,12 @@
           %tr
             %th Name
             %th Email
-            %th Account
+            %th{:colspan => "3"}
         %tbody
         - @customers.each do |customer|
           %tr
             %td= customer.name
             %td= customer.email
-            %td= customer.account
             %td= link_to 'Show', customer
             %td= link_to 'Edit', edit_customer_path(customer)
             %td= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' }
