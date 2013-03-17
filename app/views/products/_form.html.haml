@@ -17,12 +17,9 @@
     = f.text_field :description
   .field
     = f.label :list_price
-    = f.text_field :list_price
+    = f.number_field :list_price
   .field
     = f.label :sale_price
-    = f.text_field :sale_price
-  .field
-    = f.label :account
-    = f.text_field :account
+    = f.number_field :sale_price
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', :class => "button radius"

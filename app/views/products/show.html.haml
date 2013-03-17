@@ -1,24 +1,22 @@
-%p#notice= notice
+- content_for(:navigation) do
+  = render :partial => "/layouts/member_navigation", :locals => { :active => "products" }
 
-%p
-  %b Code:
-  = @product.code
-%p
-  %b Name:
-  = @product.name
-%p
-  %b Description:
-  = @product.description
-%p
-  %b List price:
-  = @product.list_price
-%p
-  %b Sale price:
-  = @product.sale_price
-%p
-  %b Account:
-  = @product.account
-
-= link_to 'Edit', edit_product_path(@product)
-\|
-= link_to 'Back', products_path
+.row
+  .three.columns
+    .sidebar
+      %ul.nav-bar.vertical
+        %li
+          = link_to 'Back', products_path
+  .nine.columns
+    .twelve.columns
+      %h4
+        Products
+        %small
+          Manage the products you sell
+      %hr
+    .twelve.columns
+      - if !notice.nil?
+        .alert-box.secondary
+          = notice
+          %a.close{:href => ""}
+            &times;

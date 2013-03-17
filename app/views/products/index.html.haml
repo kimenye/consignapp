@@ -31,5 +31,5 @@
             %td= product.description
             %td= product.list_price
             %td= product.sale_price
-            %td= link_to 'Edit', edit_product_path(product)
-            %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+            %td= link_to 'Edit', edit_product_path(product), :class => "button radius small"
+            %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button radius small"
