@@ -1,15 +1,21 @@
-%p#notice= notice
+- content_for(:navigation) do
+  = render :partial => "/layouts/member_navigation", :locals => { :active => "customers" }
 
-%p
-  %b Name:
-  = @customer.name
-%p
-  %b Email:
-  = @customer.email
-%p
-  %b Account:
-  = @customer.account
-
-= link_to 'Edit', edit_customer_path(@customer)
-\|
-= link_to 'Back', customers_path
+.row
+  .three.columns
+    .sidebar
+      %ul.nav-bar.vertical
+        %li
+          = link_to 'Back', customers_path
+  .nine.columns
+    .twelve.columns
+      %h4
+        Customers
+        %small
+          Manage the stores where you deliver your consignments
+      %hr
+    .twelve.columns
+      .alert-box.secondary
+        = notice
+        %a.close{:href => ""}
+          &times;

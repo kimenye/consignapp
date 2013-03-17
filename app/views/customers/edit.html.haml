@@ -1,7 +1,18 @@
-%h1 Editing customer
+- content_for(:navigation) do
+  = render :partial => "/layouts/member_navigation", :locals => { :active => "customers" }
 
-= render 'form'
+.row
+  .three.columns
+    .sidebar
+      %ul.nav-bar.vertical
+        %li
+          = link_to 'Back', customers_path
+  .nine.columns
+    .twelve.columns
+      %h4
+        Edit Customer
+        %small
 
-= link_to 'Show', @customer
-\|
-= link_to 'Back', customers_path
+      %hr
+    .twelve.columns
+      = render 'form'
