@@ -1,8 +1,9 @@
 class CustomersController < ApplicationController
+  before_filter :authenticate_user!
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+    @customers = Customer.where(:account_id => current_user.account_id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +26,6 @@ class CustomersController < ApplicationController
   # GET /customers/new.json
   def new
     @customer = Customer.new
-    @customer.account_id = current_user.account_id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,6 +42,7 @@ class CustomersController < ApplicationController
   # POST /customers.json
   def create
     @customer = Customer.new(params[:customer])
+    @customer.account_id = current_user.account_id
 
     respond_to do |format|
       if @customer.save
