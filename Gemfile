@@ -29,3 +29,4 @@ gem "pry", :group => :development
 gem "pry-nav", :group => :development
 gem "wicked"
 gem "sqlite3", :group => :development
+gem "roo"

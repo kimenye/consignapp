@@ -1,5 +1,7 @@
 Consignapp::Application.routes.draw do
-  resources :products
+  resources :products do
+    collection { post :import }
+  end
 
 
   resources :customers

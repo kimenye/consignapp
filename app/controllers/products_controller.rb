@@ -11,6 +11,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def import
+    count = Product.import(params[:file], current_user.account_id)
+    redirect_to products_path, notice: " #{count} Products imported."
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show

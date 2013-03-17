@@ -6,6 +6,16 @@
       %ul.nav-bar.vertical
         %li
           = link_to 'New Product', new_product_path
+    .upload
+      %hr
+      %h5
+        Upload Spreadsheet
+      %p
+        You can upload a spreadsheet of your products. This needs to be an .xls or .xlsx file. See the sample file for the preferred format.
+
+      = form_tag import_products_path, multipart: true do
+        = file_field_tag :file, :class => "upload"
+        = submit_tag "Import", :class => "button radius upload"
   .nine.columns
     .twelve.columns
       %h4
@@ -13,6 +23,12 @@
         %small
           Manage the products you sell
       %hr
+    - if !notice.nil?
+      .twelve.columns
+        .alert-box.secondary
+          = notice
+          %a.close{:href => ""}
+            &times;
     .twelve.columns
       %table.responsive
         %thead

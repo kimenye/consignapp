@@ -148,6 +148,11 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     rolify (3.2.0)
+    roo (1.11.0)
+      nokogiri
+      rubyzip
+      spreadsheet (> 0.6.4)
+    ruby-ole (1.2.11.6)
     ruby_parser (3.1.1)
       sexp_processor (~> 4.1)
     rubyzip (0.9.9)
@@ -165,6 +170,8 @@ GEM
       websocket (~> 1.0.4)
     sexp_processor (4.1.4)
     slop (3.4.3)
+    spreadsheet (0.8.3)
+      ruby-ole (>= 1.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -223,6 +230,7 @@ DEPENDENCIES
   quiet_assets (>= 1.0.1)
   rails (= 3.2.11)
   rolify (>= 3.2.0)
+  roo
   ruby_parser (>= 3.1.1)
   sass-rails (~> 3.2.3)
   sqlite3
