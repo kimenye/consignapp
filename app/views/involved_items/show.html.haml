@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Product:
+  = @involved_item.product
+%p
+  %b Customer:
+  = @involved_item.customer
+%p
+  %b Quantity:
+  = @involved_item.quantity
+%p
+  %b Transaction type:
+  = @involved_item.transaction_type
+
+= link_to 'Edit', edit_involved_item_path(@involved_item)
+\|
+= link_to 'Back', involved_items_path

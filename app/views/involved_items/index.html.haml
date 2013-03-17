@@ -1,0 +1,8 @@
+- content_for(:navigation) do
+  = render :partial => "/layouts/member_navigation", :locals => { :active => "inventory" }
+.row
+  .three.columns
+    .sidebar
+      %ul.nav-bar.vertical
+        %li
+          = link_to 'Deliver to Customer', new_involved_item_path

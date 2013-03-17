@@ -1,4 +1,5 @@
 Consignapp::Application.routes.draw do
+  resources :involved_items
   resources :products do
     collection { post :import }
   end

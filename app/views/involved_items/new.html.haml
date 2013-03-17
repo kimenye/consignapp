@@ -1,0 +1,18 @@
+- content_for(:navigation) do
+  = render :partial => "/layouts/member_navigation", :locals => { :active => "inventory" }
+
+.row
+  .three.columns
+    .sidebar
+  .nine.columns
+    .twelve.columns
+      %h4
+        Deliveries
+        %small
+          Record deliveries to your customer
+      %hr
+-#%h1 New involved_item
+-#
+-#= render 'form'
+-#
+-#= link_to 'Back', involved_items_path
